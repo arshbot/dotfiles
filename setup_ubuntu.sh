@@ -26,6 +26,8 @@ apt install -y neofetch
 apt install -y zsh
 apt install -y git-core
 apt install -y --assume-yes vim
+apt install -y jq
+
 
 # Mark snap installs
 snap install spotify 
