@@ -4,6 +4,14 @@ Pretty self explanitory. `setup.*.sh` scripts are OS specific.
 
 ## Useful shortcuts
 
+### Running
+
+```
+$ sudo bash setup_popos.sh
+$ exit # No idea why this is necessary, but sudo or bash drops the script
+       # into a shell that needs to be exited
+```
+
 ### Download via zipfile
 
 ```
