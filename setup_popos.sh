@@ -45,7 +45,7 @@ sed -i -e 's/\/bin\/bash\//\/bin\/zsh\//g' /etc/passwd
 cd ~/Downloads
 wget https://zoom.us/client/latest/zoom_amd64.deb
 dpkg -i zoom*.deb
-apt-get -f install
+apt-get install -y -f
 cd -
 
 # keybase install
@@ -53,10 +53,10 @@ curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
 # if you see an error about missing `libappindicator1` from the next
 # command, you can ignore it, as the subsequent command corrects it
 apt-get upgrade
-apt-get -f install
+apt-get install -y -f
 apt-get install -y libappindicator1
 dpkg -i keybase_amd64.deb
-apt-get install -f
+apt-get install -y -f
 # run_keybase to start
 
 # Construct zshrc
@@ -71,4 +71,4 @@ vim +PluginInstall +qall
 # Install gnome-extensions
 # 
 # Assumes extensions are predownloaded and zipped in gnome-extensions within dotfiles repo
-for zipfile in gnome-extensions/*.zip; do UUID=unzip -c "$zipfile" metadata.json | grep uuid | cut -d \" -f4; mkdir -p ~/.local/share/gnome-shell/extensions/$UUID; unzip -q ~/Downloads/"$zipfile" -d ~/.local/share/gnome-shell/extensions/$UUID; gnome-shell-extension-tool -e $UUID; done
+for zipfile in gnome-extensions/*.zip; do UUID=unzip -c "$zipfile" metadata.json | grep uuid | cut -d \" -f4; mkdir -p ~/.local/share/gnome-shell/extensions/"$UUID"; unzip -q ~/Downloads/"$zipfile" -d ~/.local/share/gnome-shell/extensions/"$UUID"; gnome-shell-extension-tool -e "$UUID"; done
