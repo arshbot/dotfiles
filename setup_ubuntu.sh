@@ -54,7 +54,7 @@ curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
 # command, you can ignore it, as the subsequent command corrects it
 apt-get upgrade
 apt-get -f install
-apt-get install libappindicator1
+apt-get install -y libappindicator1
 dpkg -i keybase_amd64.deb
 apt-get install -f
 # run_keybase to start
