@@ -18,7 +18,7 @@ apt install -y snapd
 PATH=$PATH:/snap/bin
 
 
-# Mark apt install -ys
+# Mark apt install
 apt install -y firefox 
 apt install -y gnupg2
 apt install -y gnome-tweak-tool
