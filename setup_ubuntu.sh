@@ -14,16 +14,18 @@ mkdir ~/Projects
 mkdir ~/Limbo
 
 # Install snap
-apt install snapd
+apt install -y snapd
+PATH=$PATH:/snap/bin
 
-# Mark apt installs
-apt install firefox 
-apt install gnupg2
-apt install gnome-tweak-tool
-apt install neofetch
-apt install zsh
-apt install git-core
-apt install --assume-yes vim
+
+# Mark apt install -ys
+apt install -y firefox 
+apt install -y gnupg2
+apt install -y gnome-tweak-tool
+apt install -y neofetch
+apt install -y zsh
+apt install -y git-core
+apt install -y --assume-yes vim
 
 # Mark snap installs
 snap install spotify 
