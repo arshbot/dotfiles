@@ -4,12 +4,14 @@ Pretty self explanitory. `setup.*.sh` scripts are OS specific.
 
 ## Useful shortcuts
 
-### Download zip and unzip
+### Download via zipfile
 
 ```
-cd ~/Downloads
-wget bit.ly/arshbotdotfileszip -O dotfiles.zip
-unzip dotfiles.zip
+# Pop!_os
+
+$ cd ~/Downloads
+$ wget bit.ly/arshbotdotfileszip -O dotfiles.zip
+$ unzip dotfiles.zip
 ```
 
 ## bit.ly links
