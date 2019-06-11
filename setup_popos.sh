@@ -71,4 +71,4 @@ vim +PluginInstall +qall
 # Install gnome-extensions
 # 
 # Assumes extensions are predownloaded and zipped in gnome-extensions within dotfiles repo
-for zipfile in gnome-extensions/*.zip; do UUID=unzip -c "$zipfile" metadata.json | grep uuid | cut -d \" -f4; mkdir -p ~/.local/share/gnome-shell/extensions/"$UUID"; unzip -q ~/Downloads/"$zipfile" -d ~/.local/share/gnome-shell/extensions/"$UUID"; gnome-shell-extension-tool -e "$UUID"; done
+for zipfile in gnome-extensions/*.zip; do UUID=unzip -c "$zipfile" metadata.json | grep uuid | cut -d \" -f4; mkdir -p ~/.local/share/gnome-shell/extensions/"$UUID"; unzip -q "$zipfile" -d ~/.local/share/gnome-shell/extensions/"$UUID"; gnome-shell-extension-tool -e "$UUID"; done
