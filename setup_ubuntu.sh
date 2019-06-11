@@ -36,7 +36,8 @@ snap install kubectl --classic
 
 # oh-my-zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-chsh -s `which zsh`
+chsh -s $(which zsh)
+sed -i -e 's/\/bin\/bash\//\/bin\/zsh\//g' /etc/passwd
 
 # zoom install
 cd ~/Downloads
