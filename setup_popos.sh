@@ -77,3 +77,9 @@ for zipfile in gnome-extensions/*.zip; do
       unzip -q "$zipfile" -d ~/.local/share/gnome-shell/extensions/"$UUID";
       gnome-shell-extension-tool -e "$UUID";
 done
+
+# git setup
+git config --global user.name "Harsha Goli"
+git config --global user.name "harshagoli@gmail.com"
+git config --global core.editor vim
+git config --global credential.helper wincred
