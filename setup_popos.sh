@@ -35,6 +35,8 @@ snap install telegram-desktop
 snap install slack --classic
 snap install microk8s --classic
 snap install kubectl --classic
+snap install skaffold
+snap install helm --classic
 
 # oh-my-zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
