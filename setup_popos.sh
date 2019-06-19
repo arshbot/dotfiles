@@ -65,6 +65,7 @@ apt-get install -y -f
 # Construct zshrc
 cat bash_aliases.sh >> ~/.zshrc
 cat fold_aliases.sh >> ~/.zshrc
+echo "clear" >> ~/.zshrc
 
 # vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
