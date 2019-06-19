@@ -88,3 +88,12 @@ git config --global user.email "harshagoli@gmail.com"
 git config --global core.editor vim
 git config --global credential.helper store
 git config --global commit.gpgsign true
+
+# Docker install ( https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04 )
+apt update
+apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+apt update # Important to update package db with Docker packages
+apt install docker-ce
+sudo usermod -a -G docker $USER
+printf "##############################\n# A reboot is required\n#\n# run $ reboot\n#\n##############################\n"
