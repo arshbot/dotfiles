@@ -32,6 +32,7 @@ apt install -y tmux
 # Mark snap installs
 snap install spotify 
 snap install telegram-desktop
+snap install mailspring
 snap install slack --classic
 snap install microk8s --classic
 snap install kubectl --classic
