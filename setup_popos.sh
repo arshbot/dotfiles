@@ -33,6 +33,7 @@ apt install -y --assume-yes vim
 apt install -y jq
 apt install -y tmux
 apt install -y bash-completion
+apt install -y python3.6
 
 # Mark snap installs
 snap install spotify 
