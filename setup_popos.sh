@@ -32,6 +32,7 @@ apt install -y git-core
 apt install -y --assume-yes vim
 apt install -y jq
 apt install -y tmux
+apt install -y bash-completion
 
 # Mark snap installs
 snap install spotify 
@@ -69,7 +70,13 @@ apt-get install -y -f
 # Construct zshrc
 cat bash_aliases.sh >> ~/.zshrc
 cat fold_aliases.sh >> ~/.zshrc
+echo "source /usr/share/bash-completion/bash_completion" >> ~/.zshrc
+echo "source <(kubectl completion bash)" >> ~/.zshrc
 echo "clear" >> ~/.zshrc
+source ~/.zshrc
+
+# Enable bash_completion
+kubectl completion bash >/etc/bash_completion.d/kubectl
 
 # vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
