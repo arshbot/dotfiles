@@ -17,6 +17,10 @@ mkdir ~/Limbo
 apt install -y snapd
 PATH=$PATH:/snap/bin
 
+# Install pip
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+rm get-pip.py
 
 # Mark apt install
 apt install -y firefox 
