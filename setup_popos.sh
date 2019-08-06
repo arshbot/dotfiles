@@ -35,6 +35,8 @@ apt install -y jq
 apt install -y tmux
 apt install -y bash-completion
 apt install -y python3.6
+apt install -y vim-gtk
+apt install -y xclip
 
 # Mark snap installs
 snap install spotify 
