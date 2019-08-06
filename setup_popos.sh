@@ -47,6 +47,9 @@ snap install microk8s --classic
 snap install kubectl --classic
 snap install helm --classic
 
+# Disable microk8s
+snap disable microk8s
+
 # Skaffold
 curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
 chmod +x skaffold
