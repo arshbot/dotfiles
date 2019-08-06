@@ -2,12 +2,13 @@
 
 #################################
 #				#
-#	setup_popos.sh		#
-#	arshbot style		#
+#	  setup_popos.sh	#
+#	  arshbot style		#
+#				#
+#           run with:		#
+#  $ sudo bash setup_popos.sh	#
 #				#
 #################################
-
-sudo -i
 
 # Create folders
 mkdir ~/Projects
