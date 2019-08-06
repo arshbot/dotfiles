@@ -45,8 +45,12 @@ snap install mailspring
 snap install slack --classic
 snap install microk8s --classic
 snap install kubectl --classic
-snap install skaffold
 snap install helm --classic
+
+# Skaffold
+curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+chmod +x skaffold
+mv skaffold /usr/local/bin
 
 # oh-my-zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
