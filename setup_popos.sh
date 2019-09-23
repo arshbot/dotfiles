@@ -37,6 +37,7 @@ apt install -y bash-completion
 apt install -y python3.6
 apt install -y vim-gtk
 apt install -y xclip
+apt install -y nomacs
 
 # Mark snap installs
 snap install spotify 
