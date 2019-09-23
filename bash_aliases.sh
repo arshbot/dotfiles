@@ -4,3 +4,8 @@ alias lnc="lncli --network=testnet"
 alias k="kubectl"
 alias c="clear"
 alias xclip="xclip -selection c"
+
+# Mark personal functions
+fm() {
+	nautilus $1 &
+}
