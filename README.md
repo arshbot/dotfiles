@@ -30,3 +30,10 @@ $ unzip dotfiles.zip
 | bit.ly/arshbotdotfilesgit | .git file for dotfiles repo; useful for git installing dotfiling |
 | bit.ly/arshbotdotfileszip | zip file useful for downloading when git not available |
 
+# Gnome extensions to install
+
+| Name | Purpose | Link |
+| ---- | ------- | ---- |
+| Netspeed | To monitor bandwidth usage on the fly. Very useful when traveling | https://extensions.gnome.org/extension/52/netmonitor/ |
+| Workspace Matrix | Creates an n by n matrix of desktops | https://extensions.gnome.org/extension/1485/workspace-matrix/ |
+
