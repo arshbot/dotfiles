@@ -79,6 +79,12 @@ dpkg -i keybase_amd64.deb
 apt-get install -y -f
 # run_keybase to start
 
+# Nordvpn install
+wget -O $HOME/Downloads/nordvpn-release_1.0.0_all.deb https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb
+dpkg -i nordvpn-release_1.0.0_all.deb
+apt update
+apt install nordvpn
+
 # Construct zshrc
 cat bash_aliases.sh >> ~/.zshrc
 cat fold_aliases.sh >> ~/.zshrc
