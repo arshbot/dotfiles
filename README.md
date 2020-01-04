@@ -37,3 +37,13 @@ $ unzip dotfiles.zip
 | Netspeed | To monitor bandwidth usage on the fly. Very useful when traveling | https://extensions.gnome.org/extension/52/netmonitor/ |
 | Workspace Matrix | Creates an n by n matrix of desktops | https://extensions.gnome.org/extension/1485/workspace-matrix/ |
 
+# gpg setup
+
+Including this because I forget how to literally every time
+
+```
+# gpg should be installed already. If not gl
+# Download Harsha\ Goli\ Secret.asc from secure source
+$ gpg --import Harsha\ Goli\ Secret.asc
+# Use pass from manager to get past armour
+```
