@@ -47,3 +47,7 @@ Including this because I forget how to literally every time
 $ gpg --import Harsha\ Goli\ Secret.asc
 # Use pass from manager to get past armour
 ```
+
+# tmux notes
+
+* the git patch for kube-tmux: https://github.com/jonmosco/kube-tmux/issues/12#issuecomment-570996392
