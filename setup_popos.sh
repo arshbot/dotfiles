@@ -123,7 +123,8 @@ git config --global commit.gpgsign true
 apt update
 apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 apt update # Important to update package db with Docker packages
-apt install docker-ce
-sudo usermod -a -G docker $USER
+apt install docker-ce -y
+usermod -a -G docker $USER
 printf "##############################\n# A reboot is required\n#\n# run $ reboot\n#\n##############################\n"
