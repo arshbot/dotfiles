@@ -64,6 +64,12 @@ function kscale {
 }
 export -f kscale
 
+function ksh {
+    POD=`kubectl get pod -l app=$1 --no-headers | grep Running | head -1 | cut -f 1 -d " "`
+    kubectl exec -it $POD sh
+}
+export -f ksh
+
 # Scale all deployments to the given number
 function kscalecfc {
     kscale cardforcoin $1
