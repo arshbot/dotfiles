@@ -11,3 +11,7 @@ alias ffP="firefox -p Personal &"
 fm() {
 	nautilus $1 &
 }
+
+resetresolve() {
+        sudo rm /etc/resolv.conf && sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf
+}
