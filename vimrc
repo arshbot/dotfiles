@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 set clipboard=unnamedplus
+set expandtab
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -30,16 +31,27 @@ set nu
 " used Bundle instead of Plugin)
 
 Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ajmwagar/vim-deus'
+Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-unimpaired'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1 
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_pylint_args = '--load-plugins pylint_django'
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
