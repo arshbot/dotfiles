@@ -7,6 +7,8 @@ call vundle#begin()
 
 set clipboard=unnamedplus
 set expandtab
+set mouse=n
+set ttymouse=xterm2
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -38,6 +40,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ajmwagar/vim-deus'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
