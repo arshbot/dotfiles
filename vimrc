@@ -41,6 +41,7 @@ Plugin 'ajmwagar/vim-deus'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-obsession'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
