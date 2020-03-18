@@ -15,3 +15,6 @@ fm() {
 resetresolve() {
         sudo rm /etc/resolv.conf && sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf
 }
+
+# Mark exports
+export PATH=$PATH:/snap/bin
