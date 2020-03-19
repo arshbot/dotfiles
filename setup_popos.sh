@@ -38,6 +38,7 @@ apt install -y python3.6
 apt install -y vim-gtk
 apt install -y xclip
 apt install -y nomacs
+apt install -y openvpn
 
 # Mark snap installs
 snap install spotify 
@@ -80,11 +81,15 @@ dpkg -i keybase_amd64.deb
 apt-get install -y -f
 # run_keybase to start
 
-# Nordvpn install
-wget -O $HOME/Downloads/nordvpn-release_1.0.0_all.deb https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb
-dpkg -i nordvpn-release_1.0.0_all.deb
-apt update
-apt install nordvpn
+# Openvpn install
+cd /etc/openvpn
+wget https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip
+unzip ovpn.zip
+rm ovpn.zip
+cd -
+sed s/auth-user-pass/auth-user-pass \/home\/harshagoli\/.vpn\/login.conf/g /etc/openvpn/ovpn_tcp/us4952.nordvpn.com.tcp.ovpn
+mkdir ~/.vpn
+touch ~/.vpn/login.conf
 
 # Construct zshrc
 cat bash_aliases.sh >> ~/.zshrc
@@ -127,4 +132,4 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bi
 apt update # Important to update package db with Docker packages
 apt install docker-ce -y
 usermod -a -G docker $USER
-printf "##############################\n# A reboot is required\n#\n# run $ reboot\n#\n##############################\n"
+printf "#####################################################\n# Installation scripts completed\n#\n# Next steps:\n#\n# 1). enter nordvpn creds into ~/.vpn/login.conf in the following format\n#\n#   user\n#   pass\n# \n# 2). run $ reboot\n#\n#####################################################\n\n"
