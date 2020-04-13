@@ -39,6 +39,8 @@ apt install -y vim-gtk
 apt install -y xclip
 apt install -y nomacs
 apt install -y openvpn
+apt install -y irssi
+apt install -y python3-distutils
 
 # Mark snap installs
 snap install spotify 
@@ -126,10 +128,10 @@ git config --global commit.gpgsign true
 
 # Docker install ( https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04 )
 apt update
-apt install apt-transport-https ca-certificates curl software-properties-common
+apt install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 apt update # Important to update package db with Docker packages
-apt install docker-ce -y
+apt install -y docker-ce
 usermod -a -G docker $USER
 printf "#####################################################\n# Installation scripts completed\n#\n# Next steps:\n#\n# 1). enter nordvpn creds into ~/.vpn/login.conf in the following format\n#\n#   user\n#   pass\n# \n# 2). run $ reboot\n#\n#####################################################\n\n"

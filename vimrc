@@ -9,6 +9,8 @@ set clipboard=unnamedplus
 set expandtab
 set mouse=n
 set ttymouse=xterm2
+set swapfile
+set dir=~/Limbo
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -32,7 +34,7 @@ set nu
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
@@ -42,28 +44,31 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-obsession'
+Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1 
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 let g:syntastic_python_pylint_args = '--load-plugins pylint_django'
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['python']
+
+set runtimepath+=~/vim-airline
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set textwidth=120 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix

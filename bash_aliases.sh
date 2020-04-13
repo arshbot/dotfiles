@@ -28,3 +28,5 @@ export -f vpn_dip
 
 # Mark exports
 export PATH=$PATH:/snap/bin
+export PATH=$PATH:$HOME/.poetry/bin
+
