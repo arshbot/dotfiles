@@ -41,6 +41,7 @@ apt install -y nomacs
 apt install -y openvpn
 apt install -y irssi
 apt install -y python3-distutils
+apt install -y fonts-powerline
 
 # Mark snap installs
 snap install spotify 
@@ -134,4 +135,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bi
 apt update # Important to update package db with Docker packages
 apt install -y docker-ce
 usermod -a -G docker $USER
-printf "#####################################################\n# Installation scripts completed\n#\n# Next steps:\n#\n# 1). enter nordvpn creds into ~/.vpn/login.conf in the following format\n#\n#   user\n#   pass\n# \n# 2). run $ reboot\n#\n#####################################################\n\n"
+printf '#%.0s' {1..`tput cols`}
+printf "\n# Installation scripts completed\n#\n# Next steps:\n#\n# 1). enter nordvpn creds into ~/.vpn/login.conf in the following format\n#\n# user\n# pass\n# \n# 2). Make sure the font in gnome-terminal > Preferences > Profile > Cobalt 2 > Custom font is set to some version of powerline\n#\n# 3). run $ reboot\n"
+printf '#%.0s' {1..`tput cols`}
+printf '\n\n'
