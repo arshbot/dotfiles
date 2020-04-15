@@ -11,6 +11,7 @@ set mouse=n
 set ttymouse=xterm2
 set swapfile
 set dir=~/Limbo
+set pastetoggle=<F2>
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -45,6 +46,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-obsession'
 Plugin 'mattn/emmet-vim'
+Plugin 'jcherven/jummidark.vim'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +66,8 @@ let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['python']
 
 set runtimepath+=~/vim-airline
+let g:airline_theme = 'cobalt2'
+let g:airline_powerline_fonts = 1
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -73,10 +78,14 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-" au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2 "
+au BufNewFile,BufRead *.sh
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=200 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 
-" Bundle 'Valloric/YouCompleteMe' "
-
+syntax enable
+colorscheme jummidark
