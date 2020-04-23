@@ -42,6 +42,7 @@ apt install -y openvpn
 apt install -y irssi
 apt install -y python3-distutils
 apt install -y fonts-powerline
+apt install -y ffmpeg
 
 # Mark snap installs
 snap install spotify 
