@@ -53,6 +53,7 @@ snap install microk8s --classic
 snap install kubectl --classic
 snap install helm --classic
 snap install code --classic
+snap install postman
 
 # Disable microk8s
 snap disable microk8s
