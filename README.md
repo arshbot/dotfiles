@@ -37,6 +37,17 @@ $ unzip dotfiles.zip
 | Netspeed | To monitor bandwidth usage on the fly. Very useful when traveling | https://extensions.gnome.org/extension/104/netspeed/ |
 | Workspace Matrix | Creates an n by n matrix of desktops | https://extensions.gnome.org/extension/1485/workspace-matrix/ |
 
+### In case navigation with matrix is being troublesome
+
+Override any key bindings in settings and run the following
+
+```
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Super>Down']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Left']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Right']"
+```
+
 # gpg setup
 
 Including this because I forget how to literally every time
