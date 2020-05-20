@@ -34,7 +34,7 @@ $ unzip dotfiles.zip
 
 | Name | Purpose | Link |
 | ---- | ------- | ---- |
-| Netspeed | To monitor bandwidth usage on the fly. Very useful when traveling | https://extensions.gnome.org/extension/52/netmonitor/ |
+| Netspeed | To monitor bandwidth usage on the fly. Very useful when traveling | https://extensions.gnome.org/extension/104/netspeed/ |
 | Workspace Matrix | Creates an n by n matrix of desktops | https://extensions.gnome.org/extension/1485/workspace-matrix/ |
 
 # gpg setup
